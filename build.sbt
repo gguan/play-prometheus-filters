@@ -36,12 +36,12 @@ lazy val root = (project in file("."))
         </developer>
       </developers>
   )
-scalaVersion := "2.13.1"
+scalaVersion := "2.13.2"
 
 crossScalaVersions := Seq(scalaVersion.value, "2.12.8", "2.11.12")
 
-val playVersion = "2.8.0"
-val prometheusClientVersion = "0.8.1"
+val playVersion = "2.8.2"
+val prometheusClientVersion = "0.9.0"
 
 libraryDependencies ++= Seq(
   "io.prometheus"             % "simpleclient"          % prometheusClientVersion,
@@ -55,5 +55,5 @@ libraryDependencies ++= Seq(
 
 libraryDependencies ++= Seq(
   "org.scalatestplus.play"    %% "scalatestplus-play"         % "5.0.0"     % Test,
-  "org.mockito"               % "mockito-core"                % "3.2.4"    % Test
+  "org.mockito"               %  "mockito-core"               % "3.2.4"    % Test
 )
